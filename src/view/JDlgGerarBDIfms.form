@@ -76,11 +76,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ler Arquivo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnLerArquivoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnGerarBD">
       <Properties>
         <Property name="text" type="java.lang.String" value="Gerar BD"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnGerarBDActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

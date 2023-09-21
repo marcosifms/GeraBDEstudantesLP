@@ -14,9 +14,11 @@ public class JDlgGerarBDIfms extends javax.swing.JDialog {
     /**
      * Creates new form JDlgGerarBDIfms
      */
+    GerarBDEstudantes gerarBDEstudantes;
     public JDlgGerarBDIfms(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        gerarBDEstudantes = new GerarBDEstudantes();
     }
 
     /**
@@ -38,8 +40,18 @@ public class JDlgGerarBDIfms extends javax.swing.JDialog {
         jScrollPane1.setViewportView(jList1);
 
         jBtnLerArquivo.setText("Ler Arquivo");
+        jBtnLerArquivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnLerArquivoActionPerformed(evt);
+            }
+        });
 
         jBtnGerarBD.setText("Gerar BD");
+        jBtnGerarBD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnGerarBDActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,6 +81,16 @@ public class JDlgGerarBDIfms extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnLerArquivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLerArquivoActionPerformed
+        // TODO add your handling code here:                
+        gerarBDEstudantes.lerArquivo();        
+    }//GEN-LAST:event_jBtnLerArquivoActionPerformed
+
+    private void jBtnGerarBDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnGerarBDActionPerformed
+        // TODO add your handling code here:
+        gerarBDEstudantes.gerarBD();
+    }//GEN-LAST:event_jBtnGerarBDActionPerformed
 
     /**
      * @param args the command line arguments
